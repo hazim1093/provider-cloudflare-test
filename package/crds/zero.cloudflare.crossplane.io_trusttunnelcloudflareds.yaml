@@ -11,7 +11,7 @@ spec:
     categories:
     - crossplane
     - managed
-    - cloudflare-upjet
+    - cloudflare
     kind: TrustTunnelCloudflared
     listKind: TrustTunnelCloudflaredList
     plural: trusttunnelcloudflareds

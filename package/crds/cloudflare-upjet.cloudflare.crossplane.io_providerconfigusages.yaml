@@ -4,14 +4,14 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.14.0
-  name: providerconfigusages.cloudflare-upjet.cloudflare.crossplane.io
+  name: providerconfigusages.cloudflare.cloudflare.crossplane.io
 spec:
-  group: cloudflare-upjet.cloudflare.crossplane.io
+  group: cloudflare.cloudflare.crossplane.io
   names:
     categories:
     - crossplane
     - provider
-    - cloudflare-upjet
+    - cloudflare
     kind: ProviderConfigUsage
     listKind: ProviderConfigUsageList
     plural: providerconfigusages

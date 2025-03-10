@@ -11,7 +11,7 @@ spec:
     categories:
     - crossplane
     - managed
-    - cloudflare-upjet
+    - cloudflare
     kind: TieredCache
     listKind: TieredCacheList
     plural: tieredcaches

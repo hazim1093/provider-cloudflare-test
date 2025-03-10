@@ -11,7 +11,7 @@ spec:
     categories:
     - crossplane
     - managed
-    - cloudflare-upjet
+    - cloudflare
     kind: WanStaticRoute
     listKind: WanStaticRouteList
     plural: wanstaticroutes

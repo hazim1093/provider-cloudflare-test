@@ -11,7 +11,7 @@ spec:
     categories:
     - crossplane
     - managed
-    - cloudflare-upjet
+    - cloudflare
     kind: TransitSiteLan
     listKind: TransitSiteLanList
     plural: transitsitelans

@@ -4,14 +4,14 @@ kind: CustomResourceDefinition
 metadata:
   annotations:
     controller-gen.kubebuilder.io/version: v0.14.0
-  name: storeconfigs.cloudflare-upjet.cloudflare.crossplane.io
+  name: storeconfigs.cloudflare.cloudflare.crossplane.io
 spec:
-  group: cloudflare-upjet.cloudflare.crossplane.io
+  group: cloudflare.cloudflare.crossplane.io
   names:
     categories:
     - crossplane
     - store
-    - cloudflare-upjet
+    - cloudflare
     kind: StoreConfig
     listKind: StoreConfigList
     plural: storeconfigs
@@ -31,7 +31,7 @@ spec:
     name: v1alpha1
     schema:
       openAPIV3Schema:
-        description: A StoreConfig configures how cloudflare-upjet controller should
+        description: A StoreConfig configures how cloudflare controller should
           store connection details.
         properties:
           apiVersion:

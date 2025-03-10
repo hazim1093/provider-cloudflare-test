@@ -31,12 +31,12 @@ import (
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
 	"sigs.k8s.io/controller-runtime/pkg/metrics"
 
-	"github.com/stakater/provider-cloudflare/apis"
-	"github.com/stakater/provider-cloudflare/apis/v1alpha1"
-	"github.com/stakater/provider-cloudflare/config"
-	"github.com/stakater/provider-cloudflare/internal/clients"
-	"github.com/stakater/provider-cloudflare/internal/controller"
-	"github.com/stakater/provider-cloudflare/internal/features"
+	"github.com/sibtaina/provider-cloudflare/apis"
+	"github.com/sibtaina/provider-cloudflare/apis/v1alpha1"
+	"github.com/sibtaina/provider-cloudflare/config"
+	"github.com/sibtaina/provider-cloudflare/internal/clients"
+	"github.com/sibtaina/provider-cloudflare/internal/controller"
+	"github.com/sibtaina/provider-cloudflare/internal/features"
 )
 
 func main() {

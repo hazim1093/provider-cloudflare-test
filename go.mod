@@ -1,4 +1,4 @@
-module github.com/stakater/provider-cloudflare
+module github.com/sibtaina/provider-cloudflare
 
 // go 1.23.0
 

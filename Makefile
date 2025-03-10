@@ -2,7 +2,7 @@
 # Setup Project
 
 PROJECT_NAME ?= provider-cloudflare
-PROJECT_REPO ?= github.com/stakater/$(PROJECT_NAME)
+PROJECT_REPO ?= github.com/sibtaina/$(PROJECT_NAME)
 
 export TERRAFORM_VERSION ?= 1.5.7
 

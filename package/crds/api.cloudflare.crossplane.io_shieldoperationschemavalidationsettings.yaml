@@ -11,7 +11,7 @@ spec:
     categories:
     - crossplane
     - managed
-    - cloudflare-upjet
+    - cloudflare
     kind: ShieldOperationSchemaValidationSettings
     listKind: ShieldOperationSchemaValidationSettingsList
     plural: shieldoperationschemavalidationsettings

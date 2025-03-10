@@ -13,7 +13,7 @@ import (
 
 // Package type metadata.
 const (
-	Group   = "cloudflare-upjet.cloudflare.crossplane.io"
+	Group   = "cloudflare.cloudflare.crossplane.io"
 	Version = "v1alpha1"
 )
 

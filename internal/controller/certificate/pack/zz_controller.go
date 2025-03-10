@@ -21,8 +21,8 @@ import (
 	"github.com/pkg/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
 
-	v1alpha1 "github.com/stakater/provider-cloudflare/apis/certificate/v1alpha1"
-	features "github.com/stakater/provider-cloudflare/internal/features"
+	v1alpha1 "github.com/sibtaina/provider-cloudflare/apis/certificate/v1alpha1"
+	features "github.com/sibtaina/provider-cloudflare/internal/features"
 )
 
 // Setup adds a controller that reconciles Pack managed resources.
