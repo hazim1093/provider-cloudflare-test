@@ -10,17 +10,123 @@ package apis
 import (
 	"k8s.io/apimachinery/pkg/runtime"
 
-	v1alpha1 "github.com/upbound/upjet-provider-template/apis/null/v1alpha1"
-	v1alpha1apis "github.com/upbound/upjet-provider-template/apis/v1alpha1"
-	v1beta1 "github.com/upbound/upjet-provider-template/apis/v1beta1"
+	v1alpha1 "github.com/stakater/provider-cloudflare/apis/access/v1alpha1"
+	v1alpha1account "github.com/stakater/provider-cloudflare/apis/account/v1alpha1"
+	v1alpha1api "github.com/stakater/provider-cloudflare/apis/api/v1alpha1"
+	v1alpha1argo "github.com/stakater/provider-cloudflare/apis/argo/v1alpha1"
+	v1alpha1authenticated "github.com/stakater/provider-cloudflare/apis/authenticated/v1alpha1"
+	v1alpha1bot "github.com/stakater/provider-cloudflare/apis/bot/v1alpha1"
+	v1alpha1byo "github.com/stakater/provider-cloudflare/apis/byo/v1alpha1"
+	v1alpha1calls "github.com/stakater/provider-cloudflare/apis/calls/v1alpha1"
+	v1alpha1certificate "github.com/stakater/provider-cloudflare/apis/certificate/v1alpha1"
+	v1alpha1cloud "github.com/stakater/provider-cloudflare/apis/cloud/v1alpha1"
+	v1alpha1cloudflare "github.com/stakater/provider-cloudflare/apis/cloudflare/v1alpha1"
+	v1alpha1cloudforce "github.com/stakater/provider-cloudflare/apis/cloudforce/v1alpha1"
+	v1alpha1content "github.com/stakater/provider-cloudflare/apis/content/v1alpha1"
+	v1alpha1custom "github.com/stakater/provider-cloudflare/apis/custom/v1alpha1"
+	v1alpha1d1 "github.com/stakater/provider-cloudflare/apis/d1/v1alpha1"
+	v1alpha1dns "github.com/stakater/provider-cloudflare/apis/dns/v1alpha1"
+	v1alpha1email "github.com/stakater/provider-cloudflare/apis/email/v1alpha1"
+	v1alpha1firewall "github.com/stakater/provider-cloudflare/apis/firewall/v1alpha1"
+	v1alpha1hostname "github.com/stakater/provider-cloudflare/apis/hostname/v1alpha1"
+	v1alpha1hyperdrive "github.com/stakater/provider-cloudflare/apis/hyperdrive/v1alpha1"
+	v1alpha1image "github.com/stakater/provider-cloudflare/apis/image/v1alpha1"
+	v1alpha1keyless "github.com/stakater/provider-cloudflare/apis/keyless/v1alpha1"
+	v1alpha1leaked "github.com/stakater/provider-cloudflare/apis/leaked/v1alpha1"
+	v1alpha1list "github.com/stakater/provider-cloudflare/apis/list/v1alpha1"
+	v1alpha1load "github.com/stakater/provider-cloudflare/apis/load/v1alpha1"
+	v1alpha1logpull "github.com/stakater/provider-cloudflare/apis/logpull/v1alpha1"
+	v1alpha1logpush "github.com/stakater/provider-cloudflare/apis/logpush/v1alpha1"
+	v1alpha1magic "github.com/stakater/provider-cloudflare/apis/magic/v1alpha1"
+	v1alpha1managed "github.com/stakater/provider-cloudflare/apis/managed/v1alpha1"
+	v1alpha1mtls "github.com/stakater/provider-cloudflare/apis/mtls/v1alpha1"
+	v1alpha1notification "github.com/stakater/provider-cloudflare/apis/notification/v1alpha1"
+	v1alpha1observatory "github.com/stakater/provider-cloudflare/apis/observatory/v1alpha1"
+	v1alpha1origin "github.com/stakater/provider-cloudflare/apis/origin/v1alpha1"
+	v1alpha1page "github.com/stakater/provider-cloudflare/apis/page/v1alpha1"
+	v1alpha1pages "github.com/stakater/provider-cloudflare/apis/pages/v1alpha1"
+	v1alpha1queue "github.com/stakater/provider-cloudflare/apis/queue/v1alpha1"
+	v1alpha1r2 "github.com/stakater/provider-cloudflare/apis/r2/v1alpha1"
+	v1alpha1rate "github.com/stakater/provider-cloudflare/apis/rate/v1alpha1"
+	v1alpha1regional "github.com/stakater/provider-cloudflare/apis/regional/v1alpha1"
+	v1alpha1registrar "github.com/stakater/provider-cloudflare/apis/registrar/v1alpha1"
+	v1alpha1snippet "github.com/stakater/provider-cloudflare/apis/snippet/v1alpha1"
+	v1alpha1spectrum "github.com/stakater/provider-cloudflare/apis/spectrum/v1alpha1"
+	v1alpha1stream "github.com/stakater/provider-cloudflare/apis/stream/v1alpha1"
+	v1alpha1tiered "github.com/stakater/provider-cloudflare/apis/tiered/v1alpha1"
+	v1alpha1total "github.com/stakater/provider-cloudflare/apis/total/v1alpha1"
+	v1alpha1turnstile "github.com/stakater/provider-cloudflare/apis/turnstile/v1alpha1"
+	v1alpha1url "github.com/stakater/provider-cloudflare/apis/url/v1alpha1"
+	v1alpha1user "github.com/stakater/provider-cloudflare/apis/user/v1alpha1"
+	v1alpha1apis "github.com/stakater/provider-cloudflare/apis/v1alpha1"
+	v1beta1 "github.com/stakater/provider-cloudflare/apis/v1beta1"
+	v1alpha1waiting "github.com/stakater/provider-cloudflare/apis/waiting/v1alpha1"
+	v1alpha1web "github.com/stakater/provider-cloudflare/apis/web/v1alpha1"
+	v1alpha1web3 "github.com/stakater/provider-cloudflare/apis/web3/v1alpha1"
+	v1alpha1workers "github.com/stakater/provider-cloudflare/apis/workers/v1alpha1"
+	v1alpha1zero "github.com/stakater/provider-cloudflare/apis/zero/v1alpha1"
+	v1alpha1zone "github.com/stakater/provider-cloudflare/apis/zone/v1alpha1"
 )
 
 func init() {
 	// Register the types with the Scheme so the components can map objects to GroupVersionKinds and back
 	AddToSchemes = append(AddToSchemes,
 		v1alpha1.SchemeBuilder.AddToScheme,
+		v1alpha1account.SchemeBuilder.AddToScheme,
+		v1alpha1api.SchemeBuilder.AddToScheme,
+		v1alpha1argo.SchemeBuilder.AddToScheme,
+		v1alpha1authenticated.SchemeBuilder.AddToScheme,
+		v1alpha1bot.SchemeBuilder.AddToScheme,
+		v1alpha1byo.SchemeBuilder.AddToScheme,
+		v1alpha1calls.SchemeBuilder.AddToScheme,
+		v1alpha1certificate.SchemeBuilder.AddToScheme,
+		v1alpha1cloud.SchemeBuilder.AddToScheme,
+		v1alpha1cloudflare.SchemeBuilder.AddToScheme,
+		v1alpha1cloudforce.SchemeBuilder.AddToScheme,
+		v1alpha1content.SchemeBuilder.AddToScheme,
+		v1alpha1custom.SchemeBuilder.AddToScheme,
+		v1alpha1d1.SchemeBuilder.AddToScheme,
+		v1alpha1dns.SchemeBuilder.AddToScheme,
+		v1alpha1email.SchemeBuilder.AddToScheme,
+		v1alpha1firewall.SchemeBuilder.AddToScheme,
+		v1alpha1hostname.SchemeBuilder.AddToScheme,
+		v1alpha1hyperdrive.SchemeBuilder.AddToScheme,
+		v1alpha1image.SchemeBuilder.AddToScheme,
+		v1alpha1keyless.SchemeBuilder.AddToScheme,
+		v1alpha1leaked.SchemeBuilder.AddToScheme,
+		v1alpha1list.SchemeBuilder.AddToScheme,
+		v1alpha1load.SchemeBuilder.AddToScheme,
+		v1alpha1logpull.SchemeBuilder.AddToScheme,
+		v1alpha1logpush.SchemeBuilder.AddToScheme,
+		v1alpha1magic.SchemeBuilder.AddToScheme,
+		v1alpha1managed.SchemeBuilder.AddToScheme,
+		v1alpha1mtls.SchemeBuilder.AddToScheme,
+		v1alpha1notification.SchemeBuilder.AddToScheme,
+		v1alpha1observatory.SchemeBuilder.AddToScheme,
+		v1alpha1origin.SchemeBuilder.AddToScheme,
+		v1alpha1page.SchemeBuilder.AddToScheme,
+		v1alpha1pages.SchemeBuilder.AddToScheme,
+		v1alpha1queue.SchemeBuilder.AddToScheme,
+		v1alpha1r2.SchemeBuilder.AddToScheme,
+		v1alpha1rate.SchemeBuilder.AddToScheme,
+		v1alpha1regional.SchemeBuilder.AddToScheme,
+		v1alpha1registrar.SchemeBuilder.AddToScheme,
+		v1alpha1snippet.SchemeBuilder.AddToScheme,
+		v1alpha1spectrum.SchemeBuilder.AddToScheme,
+		v1alpha1stream.SchemeBuilder.AddToScheme,
+		v1alpha1tiered.SchemeBuilder.AddToScheme,
+		v1alpha1total.SchemeBuilder.AddToScheme,
+		v1alpha1turnstile.SchemeBuilder.AddToScheme,
+		v1alpha1url.SchemeBuilder.AddToScheme,
+		v1alpha1user.SchemeBuilder.AddToScheme,
 		v1alpha1apis.SchemeBuilder.AddToScheme,
 		v1beta1.SchemeBuilder.AddToScheme,
+		v1alpha1waiting.SchemeBuilder.AddToScheme,
+		v1alpha1web.SchemeBuilder.AddToScheme,
+		v1alpha1web3.SchemeBuilder.AddToScheme,
+		v1alpha1workers.SchemeBuilder.AddToScheme,
+		v1alpha1zero.SchemeBuilder.AddToScheme,
+		v1alpha1zone.SchemeBuilder.AddToScheme,
 	)
 }
 
