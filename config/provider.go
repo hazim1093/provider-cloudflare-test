@@ -10,13 +10,13 @@ import (
 
 	ujconfig "github.com/crossplane/upjet/pkg/config"
 
-	"github.com/stakater/provider-cloudflare/config/account"
-	"github.com/stakater/provider-cloudflare/config/zone"
+	"github.com/sibtaina/provider-cloudflare/config/account"
+	"github.com/sibtaina/provider-cloudflare/config/zone"
 )
 
 const (
 	resourcePrefix = "cloudflare"
-	modulePath     = "github.com/stakater/provider-cloudflare"
+	modulePath     = "github.com/sibtaina/provider-cloudflare"
 )
 
 //go:embed schema.json
